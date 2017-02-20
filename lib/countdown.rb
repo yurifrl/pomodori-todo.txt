@@ -1,5 +1,4 @@
 class Countdown
-  
   def run seconds, options={}
     seconds.downto(0) do |current_seconds|
       sleep 1
@@ -12,7 +11,7 @@ class Countdown
   private
 
   def write_tmux(current_seconds)
-    `echo #{to_minutes(current_seconds, :tmux)} > ~/.pomo.txt.tmux` 
+    `echo #{to_minutes(current_seconds, :tmux)} > ~/todo/.pomo.txt.tmux`
   end
 
   def set_window_title(current_seconds)
