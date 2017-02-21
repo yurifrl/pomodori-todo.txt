@@ -1,7 +1,6 @@
 #!/usr/bin/env ruby
 
 require 'date'
-require 'rainbow'
 require_relative 'lib/task'
 require_relative 'lib/countdown'
 require_relative 'lib/pomo_logger'

@@ -6,12 +6,13 @@ class Countdown
       set_window_title(current_seconds) if (options[:services] || []).include?(:iterm2)
       STDOUT.write "[RUNNING] #{to_minutes(current_seconds)}\r"
     end
+    `beep -f 5000 -l 50 -r 200`
   end
 
   private
 
   def write_tmux(current_seconds)
-    `echo #{to_minutes(current_seconds, :tmux)} > ~/todo/.pomo.txt.tmux`
+    `echo #{to_minutes(current_seconds, :tmux)} > ~/todo/pomo.txt.tmux`
   end
 
   def set_window_title(current_seconds)

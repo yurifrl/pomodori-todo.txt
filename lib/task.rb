@@ -1,5 +1,3 @@
-require 'rainbow'
-
 class Task
 
   attr_accessor :text
@@ -43,7 +41,7 @@ class Task
     return if blank?(text)
     print "#{index} #{text} "
     color = STATUS_COLORS[self.status]
-    puts Rainbow("(#pomo: #{pomodori}/#{planned})").send(color)
+    puts "(#pomo: #{pomodori}/#{planned})"
   end
 
   def status
